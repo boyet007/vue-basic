@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
+    <title>Document</title>
+</head>
+<body>
+    <div id="component_test">
+        <testcomponent></testcomponent>
+        <cobacomponent></cobacomponent>
+    </div>
+    <div id="component_test1">
+        <testcomponent><</testcomponent>
+    </div>
+
+    <script>
+        //global component
+        Vue.component('testcomponent', {
+            template: '<h1>This is comming from component</h1>'
+        });
+
+        var vm = new Vue({
+            el: '#component_test',
+            components: {
+                'cobacomponent' : {
+                    template: '<h2>coba komponen</h2>' 
+                }
+            }
+        });
+
+        var vm = new Vue({
+            el: '#component_test1'
+        });
+
+
+    </script>
+</body>
+</html>
