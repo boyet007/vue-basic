@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+<body>
+    <div id="app">
+
+        <button type="button" v-on:click.prevent.stop="tambah_hasil">klik</button>
+
+        <p>{{ hasil }}</p>
+
+    </div>
+
+    <script>
+        new Vue({
+            el: '#app',
+            data: {
+                hasil: 0
+            },
+            methods: {
+                tambah_hasil : function() {
+                    this.hasil++;
+                }
+            }
+        });
+    </script>
+</body>
+</html>
