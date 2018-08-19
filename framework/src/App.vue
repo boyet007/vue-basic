@@ -1,23 +1,23 @@
 <template>
-  <div id="app">
-    <img src="./assets/logo.png">
-    <router-view/>
-  </div>
+    <div>
+        <h1>{{ title }}</h1>
+        <ninjas></ninjas>
+    </div>
 </template>
 
 <script>
+import Ninjas from './Ninjas.vue'
 export default {
-  name: 'App'
-}
+  components: {
+      'ninjas' : Ninjas
+  },
+  data: function(){
+    return {
+      title: "Ninja App"
+    };
+  }
+};
 </script>
 
 <style>
-#app {
-  font-family: 'Avenir', Helvetica, Arial, sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
-  text-align: center;
-  color: #2c3e50;
-  margin-top: 60px;
-}
 </style>
